@@ -1,0 +1,15 @@
+.submit{
+    border: 2px solid black;
+    width: 20%;
+    margin-left: 65%;
+    border-radius: 20px;
+    background-color: rgb(97, 184, 212);
+    font-size: 25px;
+    height: 6%;
+    color: red;
+}
+.student-list{
+    margin-left: 7%;
+    margin-top: 3%;
+    color: black;
+}
