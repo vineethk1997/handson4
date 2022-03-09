@@ -13,3 +13,8 @@
     margin-top: 3%;
     color: black;
 }
+.Form_Container{
+    display: flex;
+    justify-content: space-between;
+
+}

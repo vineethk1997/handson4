@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useContext} from "react";
 import './Student.css';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -9,7 +9,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
 
-
+// import {Link} from "react-router-dom";
 
 
 
@@ -17,18 +17,18 @@ import Paper from '@mui/material/Paper';
 
 function Student() {
 
-  function createData(name, age, course, batch, change) {
-    return { name, age, course, batch, change };
-  }
+  // function createData(name, age, course, batch, change) {
+  //   return { name, age, course, batch, change };
+  // }
   
-  const rows = [
-    createData('Froze', 19, 'MERN', 'October', 'edit'),
-    createData('Tom', 27,'MERN','October', 'edit'),
-    createData('Jack', 22, 'MERN', 'October', 'edit'),
-    createData('Sam', 35, 'MERN', 'October', 'edit'),
-    createData('Ginger', 36, 'MERN', 'October', 'edit'),
-  ];
-
+  // const student = [
+  //   createData('Froze', 19, 'MERN', 'October', 'edit'),
+  //   createData('Tom', 27,'MERN','October', 'edit'),
+  //   createData('Jack', 22, 'MERN', 'October', 'edit'),
+  //   createData('Sam', 35, 'MERN', 'October', 'edit'),
+  //   createData('Ginger', 36, 'MERN', 'October', 'edit'),
+  // ];
+  const [student, setStudent] = useContext("StudentList")
   return (
     <>
     <div className="Student">
@@ -48,7 +48,7 @@ function Student() {
         </TableRow>
       </TableHead>
       <TableBody>
-        {rows.map((row) => (
+        {student.map((row) => (
           <TableRow
             key={row.name}
             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
