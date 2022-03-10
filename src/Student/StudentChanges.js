@@ -11,10 +11,10 @@ const StudentChanges = () => {
   const {id} = useParams();
   let [student] = useContext(StudentContext);
 
-  // let [name, setName] = useState(student[id].name);
-  // let [age, setAge] = useState(student[id].age);
-  // let [course, setCourse] = useState(student[id].course);
-  // let [batch, setBatch] = useState(student[id].batch);
+  let [name, setName] = useState("");
+  let [age, setAge] = useState("");
+  let [course, setCourse] = useState("");
+  let [batch, setBatch] = useState("");
   
   console.log(student);
 
