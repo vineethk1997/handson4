@@ -1,6 +1,6 @@
 import React, { useState,useContext } from 'react';
 import StudentContext from "./StudentContext";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import './Student.css';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -9,7 +9,7 @@ const StudentChanges = () => {
   
   
   const navigate = useNavigate();
-  const {id} = useParams();
+  // const {id} = useParams();
   let [student,setStudent] = useContext(StudentContext);
 
   let [name, setName] = useState("");
