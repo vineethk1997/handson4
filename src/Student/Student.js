@@ -7,28 +7,23 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-
-
-// import {Link} from "react-router-dom";
+import StudentContext from "./StudentContext";
 
 
 
 
 
 function Student() {
-
-  // function createData(name, age, course, batch, change) {
-  //   return { name, age, course, batch, change };
-  // }
   
-  // const student = [
-  //   createData('Froze', 19, 'MERN', 'October', 'edit'),
-  //   createData('Tom', 27,'MERN','October', 'edit'),
-  //   createData('Jack', 22, 'MERN', 'October', 'edit'),
-  //   createData('Sam', 35, 'MERN', 'October', 'edit'),
-  //   createData('Ginger', 36, 'MERN', 'October', 'edit'),
-  // ];
-  const [student, setStudent] = useContext("StudentList")
+ let [student] = useContext(StudentContext);
+
+
+  // const rows = [{id:'1',name:'Froze',age: '19', course: 'MERN',batch: 'November'},
+  //   {id:'2',name:'Sroze',age: '19', course: 'MERN',batch: 'October'},
+  //   {id:'3',name:'Groze',age: '29', course: 'MERN',batch: 'October'},
+  //   {id:'4',name:'Yroze',age: '18', course: 'MERN',batch: 'November'},
+  //   {id:'5',name:'Nroze',age: '10', course: 'MERN',batch: 'October'},]
+
   return (
     <>
     <div className="Student">
@@ -44,11 +39,11 @@ function Student() {
           <TableCell align="right">age</TableCell>
           <TableCell align="right">course&nbsp;(g)</TableCell>
           <TableCell align="right">batch&nbsp;(g)</TableCell>
-          <TableCell align="right">change&nbsp;(g)</TableCell>
+          {/* <TableCell align="right">change&nbsp;(g)</TableCell> */}
         </TableRow>
       </TableHead>
       <TableBody>
-        {student.map((row) => (
+        {student.map((row) => (    
           <TableRow
             key={row.name}
             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -59,7 +54,7 @@ function Student() {
             <TableCell align="right">{row.age}</TableCell>
             <TableCell align="right">{row.course}</TableCell>
             <TableCell align="right">{row.batch}</TableCell>
-            <TableCell align="right">{row.change}</TableCell>
+            {/* <TableCell align="right">{row.change}</TableCell> */}
           </TableRow>
         ))}
       </TableBody>

@@ -1,18 +1,19 @@
 import React from "react";
 import Home from "./Component/Home";
 import './App.css';
-import Student from "./Component/Student";
+import Student from "./Student/Student";
 import Contact from './Component/Contact';
 import Navigation from "./Component/Navigation";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import { StudentList } from "./Component/StudentEdit";
+import StudentState from "./Student/StudentState";
 
 
 
 function App() {
   return (
-  <StudentList>
-     <Router>
+    <>
+    <StudentState>
+    <Router>
     <Navigation/>
     <Routes>
   
@@ -25,7 +26,8 @@ function App() {
     </Routes>
     
     </Router> 
-  </StudentList>
+    </StudentState>
+    </>
   );
   
 }
