@@ -8,6 +8,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import StudentContext from "./StudentContext";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -16,6 +17,11 @@ import StudentContext from "./StudentContext";
 function Student() {
   
  let [student] = useContext(StudentContext);
+ let navigate = useNavigate();
+ 
+ const addHandler = () => {
+  navigate(`/student-changes`);
+};
 
 
   // const rows = [{id:'1',name:'Froze',age: '19', course: 'MERN',batch: 'November'},
@@ -29,7 +35,7 @@ function Student() {
     <div className="Student">
     <h1 className="student-list">Student List</h1>
     {/* <h1>Hello</h1> */}
-    <button className="submit">Submit</button>
+    <button className="submit" onClick={addHandler}>Add</button>
     </div>
     <TableContainer component={Paper}>
     <Table sx={{ minWidth: 650 }} aria-label="simple table">

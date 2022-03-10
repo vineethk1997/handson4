@@ -6,6 +6,7 @@ import Contact from './Component/Contact';
 import Navigation from "./Component/Navigation";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import StudentState from "./Student/StudentState";
+import StudentChanges from "./Student/StudentChanges";
 
 
 
@@ -20,6 +21,9 @@ function App() {
     {/* <Route path= "/" element= {<Home/>}/> */}
     <Route path="/home"  element={<Home/>}/>
     <Route path="/student" element={<Student/>} />
+    <Route path="/student-changes" element={<StudentChanges/>} />
+    <Route path="/student-changes/:id" element={<StudentChanges/>} />
+    
   
 
     <Route path="/contact" element={<Contact/>}/>
